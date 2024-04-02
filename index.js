@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get("/smishing/", async (req, res) => {
+app.get("/smishing/check/", async (req, res) => {
   try {
     const response = await axios.get("http://localhost:3030/", {
       params: {
