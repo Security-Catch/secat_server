@@ -22,7 +22,7 @@ app.get("/smishing/check/", async (req, res) => {
 // 스미싱 신고
 app.get("/smishing/report/", async (req, res) => {
   try {
-    const response = await axios.get("http://localhost:3030/report/", {
+    const response = await axios.get("http://127.0.0.1:8000/detect", {
       params: {
         message: req.query.message,
       },
