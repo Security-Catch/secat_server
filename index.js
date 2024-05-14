@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 
 app.get("/smishing/check/", async (req, res) => {
   try {
-    const response = await axios.get("http://localhost:3030/", {
+    const response = await axios.get("http://127.0.0.1:8000/detect", {
       params: {
         message: req.query.message,
       },
