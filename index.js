@@ -19,8 +19,6 @@ app.get("/smishing/check/", async (req, res) => {
     else {
       res.status(400).send({ error : "잘못된 응답 코드"});
     }
-
-    
   } catch (error) {
     console.error("에러 발생:", error.message);
     res.status(500).send({ error: "서버 오류 발생" });
