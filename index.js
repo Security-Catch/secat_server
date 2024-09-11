@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const port = process.env.PORT || 3000;
 
+// 스미싱 검사
 app.get("/smishing/check/", async (req, res) => {
   try {
     const response = await axios.get("http://200.5.60.236:3030/smishing/check/", {
@@ -24,6 +25,7 @@ app.get("/smishing/check/", async (req, res) => {
     res.status(500).send({ error: "서버 오류 발생" });
   }
 });
+
 
 // 스미싱 신고
 app.get("/smishing/report/", async (req, res) => {
